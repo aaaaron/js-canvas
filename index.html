@@ -1,0 +1,25 @@
+<html>
+<head>
+<style>
+.body {
+	margin: 0px;
+	padding: 0px;
+}
+.canvas {
+	margin: 0px;
+	padding: 0px;
+}
+</style>
+<script type="text/javascript" src="Debug.js"></script>
+<script type="text/javascript" src="Common.js"></script>
+<script type="text/javascript" src="Canvas.js"></script>
+<script type="text/javascript" src="CanvasFont.js"></script>
+<script type="text/javascript" src="Application.js"></script>
+<script type="text/javascript" src="dc.js"></script>
+</head>
+<body class="body" onload="start();" onresize="Application.resize( document.getElementById('canvas') );">
+<canvas class="body" id="canvas" 
+	onMouseDown="Application.mouseDown( event );" onMouseUp="Application.mouseUp( event );" 
+	onMouseMove="Application.mouseMove( event );" onClick="Application.mouseClick( event );"></canvas>
+</body>
+</html>

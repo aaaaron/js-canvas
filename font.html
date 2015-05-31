@@ -1,0 +1,41 @@
+<html>
+<head>
+<script type="text/javascript" src="Debug.js"></script>
+<script type="text/javascript" src="Common.js"></script>
+<script type="text/javascript" src="CanvasFont.js"></script>
+<script type="application/x-javascript">
+// Setup
+var canvasX = 1800;
+var canvasY = 500;
+
+function start() 
+{
+Debug.setup();
+	var canvas = document.getElementById("canvas");
+	canvas.width = canvasX;
+	canvas.height = canvasY;
+	c = canvas.getContext("2d");
+	c.fillStyle = "rgb(0,0,0)";
+	c.fillRect( 0, 0, canvasX, canvasY );
+
+	var display;
+	display = '01234567890ABCDEF%.';
+	CanvasFont.drawString( c, display, "#FFF", 110, 25, 30);
+	display = 'abcdefghijklmnopqrstuvwxyz';
+	CanvasFont.drawString( c, display, "#FFF", 100, 25, 170);
+	display = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	CanvasFont.drawString( c, display, "#FFF", 40, 25, 320);
+	display = 'The quick brown fox jumps over the lazy dog';
+	CanvasFont.drawString( c, display, "#FFF", 30, 25, 380);
+	display = 'Now is the time for all good men to come to the aid of their country';
+	CanvasFont.drawString( c, display, "#FFF", 15, 25, 430);
+	display = 'This is a test, this is only a test.  If this had been an actual emergency the attention signal you just heard would have been followed by official emergency instructions';
+	CanvasFont.drawString( c, display, "#FFF", 10, 25, 460);
+
+}
+</script>
+</head>
+<body onload="start();">
+<canvas id="canvas">
+</body>
+</html>
